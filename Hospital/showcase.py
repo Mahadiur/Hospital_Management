@@ -8,15 +8,10 @@ def hospital_home(request):
     hos_employee = HospitalEmployee.objects.all()
     hos_nurse = hospitalnurse.objects.all()
 
-    hos_doc_data = {
-        'hospital_doctor_info' : hos_docter
+    hos_management_data = {
+        'hospital_doctor_info' : hos_docter,
+        'hospital_empolyee_info': hos_employee,
+        'hospital_nurse_info': hos_nurse
     }
-    hos_emp_data = {
-        'hospital_employee_info' : hos_employee
-    }
-    hos_nur_data = {
-        'hospital_nurse_info' : hos_nurse
-    }
-
-
-    return render(request, 'home.html', hos_doc_data, hos_emp_data, hos_nur_data)
+    
+    return render(request, 'home.html', hos_management_data)

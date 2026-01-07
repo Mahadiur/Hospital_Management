@@ -7,7 +7,21 @@
     <title>Hospital Home page</title>
     <link rel="stylesheet" href="{% static 'CSS/stylesheet.css' %}">
 </head>
-<body style="background-color: black;">
-    <h1 style="color: white;">Hello world</h1>
+<body style="background-color: wheat">
+    <h1 style="color: black;">Hello Django</h1>
+    <b>Doctor</b>
+    {% for i in hospital_doctor_info %}
+    <h4 style="color: black;">{{i}}</h4>
+    {% endfor%}
+    <br>
+    <b>Nurse</b>
+    {%for j in hospital_nurse_info%}
+     <h4 style="color: black;">{{j}}</h4>
+    {%endfor%}
+    <br>
+    <b>Employee</b>
+    {%for k in hospital_empolyee_info%}
+     <h4 style="color: black;">{{k}}</h4>
+    {%endfor%}
 </body>
 </html>
