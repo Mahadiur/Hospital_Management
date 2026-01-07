@@ -120,5 +120,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATICFIELS_DIRS = [
-    'Hospital/static'
+    'Hospital/static/'
 ]
