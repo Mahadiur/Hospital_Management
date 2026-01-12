@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-dark mx-auto" >
+<body class="bg-dark mx-auto">
     <div>
         <b class="text-white">Doctor Information</b>
         <table class="table ">
@@ -32,14 +32,37 @@
                     <td>{{doc_info.Doctor_name}}</td>
                     <td>{{doc_info.Doctor_designation}}</td>
                     <td>{{doc_info.Doctor_email}}</td>
-                    <td>{{doc_info.Doctor_salary}}</td>
+                    <td>{{doc_info.Doctor_phone_number}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-   
-
+    <div>
+        <b class="text-white">Hospital Nurse</b>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">NO</th>
+                    <th scope="col">Nurse Name</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for nur in hospital_nurse_info %}
+                <tr>
+                    <td scope="row">2</td>
+                    <td>{{nur.Nurse_name}}</td>
+                    <td>{{nur.Nurse_designation}}</td>
+                    <td>{{nur.Nurse_email}}</td>
+                    <td>{{nur.Nurse_phone_number}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
